@@ -1,0 +1,165 @@
+* {
+  
+}
+
+html {
+}
+
+body {
+  margin:0;
+  background-size: auto;
+  background: #262728;
+  color: #b9b9b9;
+}
+
+#viz {
+  height: 100vh;
+  background: white;
+  box-sizing: border-box;
+  margin:0;
+}
+
+#viz *{
+  font-family: 'Palanquin Dark', sans-serif;
+  color: #b9b9b9;
+}
+
+#viz-header {
+  padding: 15px 20px 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#header{
+	height: 15%;
+	padding: 25px 10px 5px;
+}
+
+#title-strip {
+	background-color:#e6e6e6;
+	padding: 15px 20px 5px;
+}
+
+h2 {
+	margin: 0;
+}
+
+#interface{
+	display: flex;
+	flex-flow: column;
+	position: relative;
+	width: 95%;
+	height: 85%;
+	margin: auto;
+	background: rgba(0, 0, 0, 0);
+}
+
+.graph {
+	width: 80%;
+	height: 50%;
+	padding: 5px;
+	display: block;
+	margin: auto;
+}
+
+#legend {
+	margin: 12px;
+}
+
+.legend-entry {
+	
+	font-size: 10px;
+	flex-wrap: nowrap;
+	margin: 3px 12px;
+}
+
+.legend-entry > p {
+	margin: .2rem .5rem;
+}
+
+.legend-entry > svg {	
+	margin: 4px 4px;
+}
+
+button {
+    border: none;
+    padding: 0px;
+    margin: 0px 5px;
+    background: #e6e6e6;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+	flex-wrap: nowrap;
+}
+
+button:hover {
+	background: #cccccc;
+}
+
+#overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.7);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#overlay_text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: black;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+
+
+.graphs{
+	width: 90%;
+	padding: 10px 30px;
+	margin: auto;
+	display:block;
+}
+
+#translucent_borders{
+	fill: white;
+	fill-opacity: .8;
+}
+
+.axis path{
+    stroke-width: 0;
+}
+
+#y_axis{
+    stroke-width: 0;
+    font-size: 10px;
+}
+
+/*
+.leg_div{
+    padding: 20px;
+    font-size: 10px;
+    display: block;
+    margin: auto;
+}
+
+#legend{
+	padding: 10px;
+	font-size: 10px;
+	display: block;
+	margin: auto;
+}
+*/

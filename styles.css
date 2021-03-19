@@ -60,6 +60,16 @@ h2 {
 	justify-content: flex-start;
 }
 
+#projects #projects-label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#projects #projects-label:hover {
+	background: none;
+}
+
 #projects div {
 	width: 25%;
 	padding: 1%;
