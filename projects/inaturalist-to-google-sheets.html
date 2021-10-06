@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link href="../styles.css" rel="stylesheet">
+</head>
+
+<style>
+
+#map {
+	object-fit: cover;
+	margin: 30px 0px;
+	width: 100%;
+	margin: auto;
+}
+
+</style>
+
+<body>
+	<div id="return">
+		<a href="../index.html"><<< main page</a>
+	</div>
+	<div class="content">
+		<h2>Mapping Western Redcedar Dieback with iNaturalist</h2>
+		<p>In the spring of 2020, I wrote a tool for <a href="https://jmhulbert.github.io/" target="_blank">Joey Hulbert's </a> Western Redcedar Dieback project. Joey's project involves mapping Redcedar dieoff in the Pacific Northwest using the input of hundreds of citizen scientists working to document cedar health in their own communities.</p>
+
+		<p>Part of Joey's project entails mapping community observations so that citizen scientists can see their own contributions. He needed a script that could automatically pull the data from iNaturalist into a Google sheet, where it could then be tied directly to a Tableau Public visualization. The current visualization, connected by my script to the iNaturalist API, can be seen <a href="https://foresthealth.org/analyses/" target="_blank">here</a>.</p>
+
+	</div>
+	<img id="map" src="../media/inaturalist-api.png"></img>
+	<div class="content">
+		<p>While parts of the script are specifically tailored to this project, certain structures and functions will be useful to others pulling their own data from iNaturalist. The Github page for the script can be found <a href="https://github.com/tk-sheldo/JSON-to-sheet" target="_blank">here</a>.</p>
+	</div>
+</body>

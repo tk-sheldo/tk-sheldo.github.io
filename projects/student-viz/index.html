@@ -20,7 +20,7 @@
 		</div>
     	<div class="content">
     		<h2>Visualizing Student Data</h2>
-			<p>I...</p>
+			<p>I created this visualization in the Spring of 2017 for a software development workshop at the Universidad Austral de Chile. There's a bit of a steep learning curve to this design, but I still think the layout has some potential. The current visualization is populated with randomly generated data.</p>
     	</div>
 		<div id="viz">
 	        <div id="viz-header">
@@ -32,18 +32,17 @@
 	        	<div style="flex-grow:1;">
 		        	<svg class="graph" id="Chart1"> 
 		        		<defs>
-							<linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-						    	<stop offset="0%" style="stop-color:white;stop-opacity:1" />
-						        <stop offset="100%" style="stop-color:white;stop-opacity:0" />
-						    </linearGradient>
-						    <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+							<linearGradient id="grad1" x1="0%" y1="0%" x2="10%" y2="0%">
 						    	<stop offset="0%" style="stop-color:white;stop-opacity:0" />
-						        <stop offset="100%" style="stop-color:white;stop-opacity:1" />
+						        <stop offset="100%" style="stop-color:white;stop-opacity:.8" />
 						    </linearGradient>
-		
+							<linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+					    		<stop offset="0%" style="stop-color:white;stop-opacity:0" />
+					        	<stop offset="100%" style="stop-color:white;stop-opacity:1" />
+					    	</linearGradient>
 						</defs>
 		        	</svg>
-		        	<svg class="graph" id="Chart2"> </svg>
+		        	<svg z-index=2 class="graph" id="Chart2"> </svg>
 	        	</div>
 	        	<div class="flex-container" id="legend">
 	        		<div class="flex-container" id="l1" style="width:800px;">

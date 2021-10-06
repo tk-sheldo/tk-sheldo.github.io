@@ -13,15 +13,11 @@ body {
 }
 
 #viz {
+  font-family: 'Palanquin Dark', sans-serif;
   height: 100vh;
   background: white;
   box-sizing: border-box;
   margin:0;
-}
-
-#viz *{
-  font-family: 'Palanquin Dark', sans-serif;
-  color: #b9b9b9;
 }
 
 #viz-header {
@@ -139,8 +135,16 @@ button:hover {
 	fill-opacity: .8;
 }
 
+.axis {
+  font-family: 'Palanquin Dark', sans-serif;
+}
+
 .axis path{
     stroke-width: 0;
+}
+
+button {
+  font-family: 'Palanquin Dark', sans-serif;
 }
 
 #y_axis{
@@ -156,10 +160,9 @@ button:hover {
     margin: auto;
 }
 
-#legend{
-	padding: 10px;
-	font-size: 10px;
-	display: block;
-	margin: auto;
-}
 */
+
+#legend{
+	color: black
+}
+

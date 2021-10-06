@@ -1,0 +1,12 @@
+
+body {
+	margin: 70px 10px;
+}
+
+.image-block {
+	position: relative;
+	text-align: center;
+	font-style: italic;
+	font-size: .8em;
+}
+

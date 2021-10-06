@@ -73,4 +73,4 @@ function getRandomData(n) {
 }
 
 // cpoies the final dataset to local storage
-localStorage.setItem("studentData", JSON.stringify(getRandomData(1000)))
+localStorage.setItem("studentData", JSON.stringify(getRandomData(500)))

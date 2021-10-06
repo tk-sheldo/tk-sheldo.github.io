@@ -1,0 +1,189 @@
+:root {
+	--stu-color: #0cc7ff;
+	--comp-color: #ccbf2a;
+}
+
+body {
+    /* overflow-x: hidden;  /* try to make this more local */  
+    margin: 0px;
+}
+
+#viz {
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    background-color: #243452;
+}
+
+#viz #map {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#viz #graticule {
+    fill: none;
+    stroke: #40485a;  
+    stroke-width: .5px;
+    stroke-opacity: .5;
+}
+
+#viz #reset-listener {
+    fill: none;
+    pointer-events: visible;
+}
+
+#viz #ocean {
+    fill: #1e2d4b;
+}
+
+#viz path {
+    transition: fill 2000ms;
+}
+
+#viz #countries {
+    transition: fill .2s;
+    fill: #315fba;
+    stroke-width: .2px;
+    stroke: #2f4163;
+}
+
+#viz #countries .selected {
+    fill: #315fba;
+}
+
+#viz #countries .unselected {
+    fill: #354C78;
+}
+
+#viz #programs {
+    fill: #C9A14B;
+    stroke: none;
+    stroke-width: 0px;
+}
+
+#viz #programs circle {
+    transition: opacity 2000ms;
+}
+
+#viz #programs .unselected {
+    opacity: .6;
+}
+
+#viz .student {
+    fill: var(--stu-color);
+    stroke: var(--stu-color);
+    color: var(--stu-color) !important;
+}
+
+#viz .tournament {
+    fill: var(--comp-color);
+    stroke: var(--comp-color);
+    color: var(--comp-color) !important;
+}
+
+#viz .feature {
+    cursor: pointer;
+    stroke-width: .7;
+    stroke-opacity: 2;
+}
+
+#viz #focus {
+    padding: 3%;
+    position: absolute;
+    background-color: #3f5d9b;
+    color: black;
+    top: 20%;
+    width: 40%;
+    max-height: 60%;
+    overflow-y: scroll;
+}
+
+#viz img {
+    height: 200px;
+    width: 200px;
+    max-width: 100%;
+    object-fit: cover;
+    margin: 0px 20px 0px 0px;
+}
+
+#viz #focus-header {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+#viz #focus-header-info {
+    padding: .5em 0 0;
+}
+
+#viz #focus-header-info #name {
+    margin: auto;
+    color: #bdc8e2;
+    font-size: 2em;
+    padding: 0.05em 0em
+}
+
+#viz #focus-header-info #location {
+    color: #8098cc;
+    margin: auto;
+    padding: 0em;
+    font-size: 1.4em;
+    font-style: italic;
+}
+
+#viz #focus-flavor-text {
+    color: #bdc8e2;
+    line-height: 1.2em;
+}
+
+#viz #legend {
+    position: absolute;
+    /*box-sizing: border-box;*/
+    bottom: 0%;
+    width: 95%;
+    margin: 2.5%;
+    transition: opacity 1500ms;
+    font-family: 'Lato',Helvetica,Arial,sans-serif;
+	font-style: italic;
+	font-weight: 400;
+}
+
+#viz #legend .leg {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#viz #legend p {
+    text-align: center;
+    margin: 4px 9px;
+}
+
+#viz #legend .leg-entry {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+#viz #legend #feature-hint p {
+	margin: 3px;
+	color: #5f92ff;
+	font-size: 1.3em;
+}
+
+#viz #zoom-hint {
+    position: absolute;
+    color: #8fa0cb;
+    left: 50%;
+    bottom: 0%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    padding: 2%;
+    transition: opacity 1000ms;
+    cursor: pointer;
+}

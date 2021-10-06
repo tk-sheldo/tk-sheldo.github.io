@@ -11,7 +11,7 @@ const graph = d3.select(".graph");
 const svg_width = parseInt(graph.style("width")) - (parseInt(graph.style("padding-left")) + parseInt(graph.style("padding-right")));
 const svg_height = parseInt(d3.select(".graph").style("height")) - (parseInt(d3.select(".graph").style("padding-top")) + parseInt(d3.select(".graph").style("padding-bottom")));
 
-const dot_opacity = .4;
+const dot_opacity = .5;
 const dot_radius = 2;
 const text_box_opacity = .7;
 
@@ -146,22 +146,48 @@ function drawChart(svg, chart_name, chart_data) {
 		
 
 	
-	// backing for axis labels
+	// axes
 
-	svg.append("rect")          
-		.attr("x", svg_width - y_axis_width)
-		.attr("y", 0)
-		.attr("width", (y_axis_width + 1))
-		.attr("height", svg_height)  
-		.attr("fill", "white")
-		.attr("opacity", .8);
-	
-	svg.append("rect")          
+	var x_axis = svg.append('svg')
+		.attr('class','x-axis-coor')
 		.attr("x", 0)
-		.attr("y", svg_height - x_axis_height)
-		.attr("width", svg_width)
-		.attr("height", x_axis_height + 1)  //
-		.attr("fill", "url(#grad2)");
+		.attr("y", "90%")
+		.attr("width", "100%")
+		.attr("height", "10%");
+
+	x_axis.append('rect')
+		.attr("x", 0)
+		.attr("y", 0)
+		.attr("width", "100%")
+		.attr("height", "100%")
+		.attr("class", "axes")
+		.attr("fill", "url(#grad2)")
+
+	x_axis.append("g")
+		.attr("id", "x_axis")
+		.attr("class", "axis")
+		.call(date_axis);
+
+
+
+	var y_axis = svg.append('svg')
+		.attr('class','y-axis-coor')
+		.attr("x", "80%")
+		.attr("y", 0)
+		.attr("width", "20%")
+		.attr("height", "100%")
+	
+	y_axis.append('rect')
+		.attr("x", 0)
+		.attr("y", 0)
+		.attr("width", "100%")
+		.attr("height", "100%")
+		.attr("fill", "url(#grad1)")
+
+	y_axis.append("g")
+		.attr("id", "y_axis")
+		.attr("class", "axis")
+		.call(nivel_axis);
 	
 	
 	// dialogue box
@@ -171,19 +197,6 @@ function drawChart(svg, chart_name, chart_data) {
 		.style("opacity", text_box_opacity)
 		.text(chart_name);
 			
-	// dibuja los ejes
-	
-	svg.append("g")
-		.attr("class", "axis")
-		.attr("id", "x_axis")
-		.attr("transform", "translate(0," + (svg_height - 20) + ")")
-		.call(date_axis);
-	
-	svg.append("g")
-		.attr("class", "axis")
-		.attr("id", "y_axis")
-		.attr("transform", "translate(" + (svg_width - y_axis_width) + ", 0)")
-		.call(nivel_axis);
 }
 
 
