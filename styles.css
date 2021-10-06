@@ -52,6 +52,11 @@ h2 {
 	width: 30%;
 	object-fit: cover;
 	flex-shrink: 3;
+	margin: 0px 0px 0px 80px;
+}
+
+#header h4 {
+	margin: 0px;
 }
 
 #projects {
