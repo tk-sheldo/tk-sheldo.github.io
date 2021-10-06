@@ -5,8 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 <link rel="stylesheet" href="../../styles.css" >
 <link rel="stylesheet" href="map_styles.css">
+<link rel="stylesheet" href="../proj-styles.css">
 <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
 </head>
+
+<style>
+    #viz { margin-block: 6vh; }
+</style>
 
 <body>
 	<div id="return">
@@ -15,41 +20,41 @@
 	<div class="content">
 		<h2>An Interactive Waterman Butterfly</h2>
 		<p>I built this webmap in the spring of 2021 for friends at <a href="https://www.westfieldacademy.net/">Westfield Academy</a>. On mobile screens, the projection is switched to a vertically-oriented Dymaxion. The present data are just placeholders.</p>
-	</div>
-	<div id="viz">
+	
+    	<div id="viz">
 
-        <svg id="map" ></svg>
-        <div id="legend">
-            <div class="leg">
-                <div class="leg-entry">
-                    <svg style="width:8px;height:8px">
-                        <circle class="student" cx="4" cy="4" r="3"/>
-                    </svg>
-                    <p class="student"> 
-                        Students & Staff
-                    </p>
+            <svg id="map" ></svg>
+            <div id="legend">
+                <div class="leg">
+                    <div class="leg-entry">
+                        <svg style="width:8px;height:8px">
+                            <circle class="student" cx="4" cy="4" r="3"/>
+                        </svg>
+                        <p class="student"> 
+                            Students & Staff
+                        </p>
+                    </div>
+                    <div class="leg-entry">
+                        <svg style="width:8px;height:8px">
+                            <circle class="tournament" cx="4" cy="4" r="3"/>
+                        </svg>
+                        <p class="tournament"> 
+                            Competitions
+                        </p>
+                    </div>
                 </div>
-                <div class="leg-entry">
-                    <svg style="width:8px;height:8px">
-                        <circle class="tournament" cx="4" cy="4" r="3"/>
+                <div id="feature-hint" class="leg leg-entry">
+                    <p>Click on a feature</p>
+                    <svg style="width:40px;height:40px">
+                            <circle class="tournament feature" cx="20" cy="20" r="13" fill-opacity=".1"/>
                     </svg>
-                    <p class="tournament"> 
-                        Competitions
-                    </p>
+                    <p>to learn more.</p>
                 </div>
             </div>
-            <div id="feature-hint" class="leg leg-entry">
-                <p>Click on a feature</p>
-                <svg style="width:40px;height:40px">
-                        <circle class="tournament feature" cx="20" cy="20" r="13" fill-opacity=".1"/>
-                </svg>
-                <p>to learn more.</p>
-            </div>
+            <div id="zoom-hint">return to entire map</div>
+
         </div>
-        <div id="zoom-hint">return to entire map</div>
-
-    </div>
-	<div class="content">
+	
 		<p>See the map in situ at <a href="https://www.westfieldacademy.net/our-community-test-copy">westfieldacademy.net</a>.</p>
 	</div>
 	<script src="https://d3js.org/d3.v4.min.js"></script>

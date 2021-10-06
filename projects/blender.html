@@ -8,23 +8,14 @@
 </head>
 
 <style>
-	
-img {
-
-	object-fit: cover;
-	display: block;
-	width: 50%;
-	margin: auto;
-
-}
 
 #film {
-	margin: 50px 10px;
+	margin: 5vh 2vw;
 }
 
 #film iframe{
-	display: block;
-	margin: auto;
+    width: 100%;
+    height: 50vh;
 }
 
 </style>
@@ -37,25 +28,25 @@ img {
 	<div class="content">
 		<p>In the Fall of 2017, a friend and I worked together on a project for the Middlebury Animation Studio, building computer tools to assist animators with several sequences that would become part of the short film <i>Estrellita</i>. The two of us were primarily focused on one shot of a mountain collapsing, where animators had run into unexpected difficulties using existing tools to animate fractured meshes.</p>
 		<p>Blender, the open-source 3D modeling and animation software used by the Middlebury Animaiton Studio, boasts an active community of modders. Several add-ons offered tools that could 'shatter' a mesh, but the resutling shards would not inherit animation data, resulting in an apparent loss of inertia.</p>
-	</div>
-	<div class="image-block">
-		<img id="map" src="../media/COM_sans.gif"></img>
-		<p> an apparent loss of inertia </p>
-	</div>
-	<div class="content">
+
+		<div class="image-block">
+			<img id="map" src="../media/COM_sans.gif"></img>
+			<p> an apparent loss of inertia </p>
+		</div>
+
 		<p>After some tinkering within Blenders standard user interface, we wrote a script that would copy over animation data from the original mesh to its' fractured descendants. A fuller description of the intricacies of that process can be found <a href="../media/cs500_write_up.pdf" target="_blank">here</a>.</p>
-	</div>
-	<div class="image-block">
-		<img id="map" src="../media/COM_with.gif"></img>
-		<p>the script in action, inertia retained</p>
-	</div>
-	<div class="content">
+
+		<div class="image-block">
+			<img id="map" src="../media/COM_with.gif"></img>
+			<p>the script in action, inertia retained</p>
+		</div>
+
 		<p>The Middlebury Animation Studio is a small community, and is only able to produce the films it does through a strong collaborative ethic. In my time there, I was constantly learning new roles, sharing desk space and critical feedback with a variety of digital artists. It was a truly interdisciplinary team, and a community as well. I loved being a part of it. You can see our fracture modifier in action about four minutes into the video, but you should really watch the whole thing.</p>
-	</div>
-	<div id="film">
-	<iframe src="https://player.vimeo.com/video/276050194?h=dc5858d5e8" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-	</div>
-	<div class="content">
+
+		<div id="film">
+		<iframe src="https://player.vimeo.com/video/276050194?h=dc5858d5e8" title="Estrellita short film" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen ></iframe>
+		</div>
+
 		<p>A big thanks to Daniel Houghton, the Animation Studio Producer.</p>
 	</div>
 
